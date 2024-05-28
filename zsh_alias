@@ -1,0 +1,49 @@
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+alias rm='rm -i'
+alias cp='cp -i'
+
+function expl()
+{
+    if [[ -z "$1" ]]; then
+        dir=$(pwd)
+    else
+        dir=$1
+    fi
+
+    if [[ $SUB_OS == 'cygwin' ]]; then
+        explorer.exe $(cygpath -w $dir)
+    elif [[ $SUB_OS == 'linux' ]]; then
+        explorer.exe $(wslpath -w $dir)
+    fi
+}
+
+if [[ $SUB_OS == 'linux' ]]; then
+    function term()
+    {
+        local -r cmd="/mnt/c/Users/$WIN_USER/AppData/Local/wsltty/bin/mintty.exe"
+
+        $cmd --WSL= --configdir='C:\Users\'$WIN_USER'\AppData\Roaming\wsltty'
+    }
+
+    # ディレクトリ指定ができない
+    alias cygwin='/mnt/c/cygwin64/bin/mintty.exe -i /Cygwin-Terminal.ico -'
+
+    alias nvim=~/.config/nvim.appimage
+fi
