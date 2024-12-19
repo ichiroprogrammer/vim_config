@@ -16,5 +16,6 @@
     patch = !git diff --no-prefix
 	ll = log --pretty=format:'%C(yellow)%h %cd %C(red)%d%Creset %s' --date=short
 	ld = log --pretty=format:'%C(yellow)%h%C(cyan)[%ci]%C(red)%d%Creset by %cn%n%s' --numstat
+    logb =for-each-ref --sort=-committerdate refs/heads/ --format='%(refname:short) %(committerdate)'
 [merge]
 	ff = true
