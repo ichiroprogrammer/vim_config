@@ -206,8 +206,9 @@ function! git_diff#begin(resize) abort
         echo l:lines
         if l:lines < 50
             execute ":set lines=50"
+            sleep 100m
         endif
-        execute ":set columns=201"
+        execute ":set columns=241"
     endif
 
 endfunction

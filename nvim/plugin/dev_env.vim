@@ -1,7 +1,7 @@
 function! dev_env#setup()
     execute ":only"
     execute ":set lines=62"
-    execute ":set columns=201"
+    execute ":set columns=241"
     
     "少し待たないとカラムが増える前にvsplitしてしまう
     execute ":sleep 300m"   

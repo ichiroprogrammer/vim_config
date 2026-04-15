@@ -78,6 +78,7 @@ export PATH="$PATH":~/.bin
 export PATH="$PATH":~/.bin/wsl-utils
 export PATH="$PATH":"/usr/local/lib/python3.8/dist-packages/"
 export PATH="$PATH":~/.local/bin
+export PATH="$PATH":"/mnt/c/Program Files/SciTools/bin/pc-win64"
 
 export LANG="ja_JP.utf8"
 
