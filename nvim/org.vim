@@ -18,8 +18,10 @@ set isfname-=:
 set isfname-=,
 set isfname-=\=
 
+set cinoptions+=#1  "右シフト時の「#が先頭である行」を特別扱いしない
+
 " encoding
-"set encoding=utf-8
+set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 

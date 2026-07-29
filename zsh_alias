@@ -47,3 +47,6 @@ if [[ $SUB_OS == 'linux' ]]; then
 
     alias nvim=~/.config/nvim.appimage
 fi
+
+alias cgrep='grep -r --include="*.c" --include="*.h" --include="*.cpp" --include="*.hpp" '
+alias ctags='ctags -R --extras=fFgpqrs --kinds-C=+px --kinds-C++=+px ' 
