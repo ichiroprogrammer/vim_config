@@ -1,11 +1,12 @@
-[user]
 [color]
 	ui = auto
 [push]
 	default = simple
+	recurseSubmodules = on-demand
 [core]
-    excludesfile = /mnt/c/linux_home/.gitignore
+	excludesfile = ~/.gitignore_global
 	editor = ~/.config/git_editor.sh
+	quotepath = false
 [alias]
     graph = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %C(yellow)%cn %Cred%d %Creset%s'
     st = status
