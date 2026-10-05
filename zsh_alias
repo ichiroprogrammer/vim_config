@@ -42,7 +42,7 @@ if [[ $SUB_OS == 'linux' ]]; then
         $cmd --WSL= --configdir='C:\Users\'$WIN_USER'\AppData\Roaming\wsltty'
     }
 
-    # $B%G%#%l%/%H%j;XDj$,$G$-$J$$(B
+    # ディレクトリ指定ができない
     alias cygwin='/mnt/c/cygwin64/bin/mintty.exe -i /Cygwin-Terminal.ico -'
 
     alias nvim=~/.config/nvim.appimage

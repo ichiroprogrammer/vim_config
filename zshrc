@@ -60,8 +60,8 @@ export SUB_OS=$(subos_name)
 if [[ $SUB_OS == 'cygwin' ]]; then
     export CYGWIN_HOME=$(cygpath -m ~)
     export CYGWIN_USER=$(whoami)
-    export LINUX_HOME=$(wsl wslpath -m '$(echo $HOME)')
-    export LINUX_USER=$(wsl whoami)
+    export LINUX_HOME=$(wsl.exe wslpath -m '$(echo $HOME)' 2> /dev/null)
+    export LINUX_USER=$(wsl.exe whoami 2> /dev/null)
 elif [[ $SUB_OS == 'linux' ]]; then
     export CYGWIN_HOME=$(/mnt/c/cygwin64/bin/cygpath.exe -m '~' | sed 's@^[cC]:@/mnt/c@g')
     export CYGWIN_USER=$(/mnt/c/cygwin64/bin/whoami.exe)
